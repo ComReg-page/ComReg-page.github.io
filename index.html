@@ -234,16 +234,24 @@
     .scene { aspect-ratio: 4 / 3; min-height: 0; }
     .authors { font-size: 0.98rem; }
   }
-  /* Phones: make the legend a solid, compact bar so it stays readable over the
-     3D content, and keep the scene tall enough to be legible. */
+  /* Phones: stack the 3D canvas, the legend, and the scrubber vertically instead
+     of overlaying the legend on the canvas — otherwise the solid legend bar covers
+     the lower (CT-bone) plot. The canvas keeps a landscape ratio so the long bone
+     fits exactly as it does on desktop. */
   @media (max-width: 560px) {
-    .scene { aspect-ratio: 5 / 4; }
+    .scene { aspect-ratio: auto; min-height: 0; }
+    .scene canvas {
+      position: relative; inset: auto;
+      width: 100%; height: auto; aspect-ratio: 4 / 3;
+    }
     .scene .hud {
-      gap: 0.55rem 0.9rem; padding: 0.55rem 0.7rem; font-size: 0.62rem;
-      background: rgba(243,246,250,0.96); border-top: 1px solid var(--line);
+      position: relative; bottom: auto;
+      gap: 0.4rem 0.85rem; padding: 0.55rem 0.7rem; font-size: 0.62rem;
+      background: var(--panel); border-top: 1px solid var(--line);
     }
     .scene .hud .lg { gap: 0.32rem; }
-    .scene .spin { width: 100%; margin-left: 0; text-align: right; }
+    .scene .spin { display: none; }
+    .scene .scrub { position: relative; bottom: auto; height: 6px; }
   }
   @media (prefers-reduced-motion: reduce) {
     .step { transition: none; }

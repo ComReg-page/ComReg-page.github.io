@@ -228,8 +228,22 @@
 
   @media (max-width: 860px) {
     .stage-grid { grid-template-columns: 1fr; }
-    .scene { min-height: 340px; aspect-ratio: 4/3; }
+    /* Width-constrained, landscape box: width follows the column (never wider than
+       the viewport), height derived from it. min(W,H)=H, so the composition scales
+       down like the desktop view instead of overflowing the screen. */
+    .scene { aspect-ratio: 4 / 3; min-height: 0; }
     .authors { font-size: 0.98rem; }
+  }
+  /* Phones: make the legend a solid, compact bar so it stays readable over the
+     3D content, and keep the scene tall enough to be legible. */
+  @media (max-width: 560px) {
+    .scene { aspect-ratio: 5 / 4; }
+    .scene .hud {
+      gap: 0.55rem 0.9rem; padding: 0.55rem 0.7rem; font-size: 0.62rem;
+      background: rgba(243,246,250,0.96); border-top: 1px solid var(--line);
+    }
+    .scene .hud .lg { gap: 0.32rem; }
+    .scene .spin { width: 100%; margin-left: 0; text-align: right; }
   }
   @media (prefers-reduced-motion: reduce) {
     .step { transition: none; }

@@ -200,16 +200,6 @@
     font-size: clamp(1.3rem, 2.6vw, 1.85rem); letter-spacing: -0.01em;
     font-weight: 700; margin: 0.45rem 0 0.9rem;
   }
-  .avail {
-    padding: 0.95rem 1.15rem; border: 1px solid var(--line);
-    border-left: 3px solid var(--syn); border-radius: 10px;
-    background: var(--ground-2); color: var(--muted);
-    font-size: 0.92rem; line-height: 1.72; margin: 0 0 1.1rem;
-  }
-  .avail strong { color: var(--syn); font-weight: 700; }
-  .avail b { color: var(--text); font-weight: 700; }
-  .avail a { color: var(--us); text-decoration: none; }
-  .avail a:hover { text-decoration: underline; }
   .bib { position: relative; }
   .bib pre {
     margin: 0; padding: 1.05rem 1.15rem; overflow-x: auto;
@@ -283,6 +273,10 @@
     <p class="corr">Correspondence: <a href="mailto:luohong.wu@balgrist.ch">luohong.wu@balgrist.ch</a></p>
 
     <div class="actions">
+      <a class="btn" href="https://link.springer.com/chapter/10.1007/978-3-032-38186-6_29" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 1A1.5 1.5 0 0 0 2 2.5v11A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V5.2a1.5 1.5 0 0 0-.44-1.06l-2.7-2.7A1.5 1.5 0 0 0 9.8 1H3.5zM9 2.2V5a1 1 0 0 0 1 1h2.8L9 2.2zM5 8.25h6v1.2H5v-1.2zm0 2.5h6v1.2H5v-1.2z"></path></svg>
+        Paper
+      </a>
       <a class="btn" href="https://github.com/luohwu/ComReg" target="_blank" rel="noopener">
         <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
         Code
@@ -349,25 +343,23 @@
   <section class="cite" id="cite">
     <p class="sec-label">Citation</p>
     <h2>Cite this work</h2>
-    <div class="avail">
-      <strong>Availability.</strong> The code is available now on
-      <a href="https://github.com/luohwu/ComReg" target="_blank" rel="noopener">GitHub</a>.
-      The peer-reviewed manuscript will be openly available <b>before the conference</b>:
-      per the <a href="https://conferences.miccai.org/2026/en/CAMERA-READY-SUBMISSION-GUIDELINES.html" target="_blank" rel="noopener">MICCAI&nbsp;2026 camera-ready guidelines</a>,
-      the open-access proceedings are released <b>no earlier than 21&nbsp;September&nbsp;2026</b> —
-      roughly one week ahead of the conference (27&nbsp;September&nbsp;–&nbsp;1&nbsp;October&nbsp;2026).
-      The BibTeX below will be updated with the final page numbers and DOI once the proceedings are published.
-    </div>
     <div class="bib">
       <button class="copy" id="copyBib" type="button" aria-label="Copy BibTeX">Copy</button>
       <pre><code id="bibtex">@inproceedings{wu2026comreg,
   title     = {Shape-Aware Registration Without Pretraining: CT--Ultrasound Bone
                Surface Alignment via Instance-Level Shape Completion},
   author    = {Wu, Luohong and Cho, Elise and Ao, Yunke and Marx, Lennard and
-               Cavalcanti, Nicola and Yang, Yiru and Seibold, Matthias and
+               Cavalcanti, Nicola A. and Yang, Yiru and Seibold, Matthias and
                F\"urnstahl, Philipp},
-  booktitle = {Medical Image Computing and Computer Assisted Intervention (MICCAI)},
-  year      = {2026}
+  booktitle = {Medical Image Computing and Computer Assisted Intervention --
+               MICCAI 2026},
+  series    = {Lecture Notes in Computer Science},
+  pages     = {301--311},
+  publisher = {Springer Nature Switzerland},
+  address   = {Cham},
+  year      = {2026},
+  doi       = {10.1007/978-3-032-38186-6_29},
+  url       = {https://link.springer.com/chapter/10.1007/978-3-032-38186-6_29}
 }</code></pre>
     </div>
   </section>
